@@ -1,0 +1,76 @@
+[
+  {
+    "id": "FLIGHT-001",
+    "user_input": "I want to fly from Singapore to Bangkok on 15 October 2026 for 2 adults, 1 child and 1 infant.",
+    "expected": {
+      "intent": "search_flight",
+      "origin": "SIN",
+      "destination": "BKK",
+      "departure_date": "2026-10-15",
+      "adults": 2,
+      "children": 1,
+      "infants": 1
+    },
+    "actual": {
+      "intent": "search_flight",
+      "origin": "SIN",
+      "destination": "BKK",
+      "departure_date": "2026-10-15",
+      "adults": 2,
+      "children": 1,
+      "infants": 1
+    },
+    "field_validation": {
+      "intent": true,
+      "origin": true,
+      "destination": true,
+      "departure_date": true,
+      "adults": true,
+      "children": true,
+      "infants": true
+    },
+    "exact_validation": true,
+    "geval_score": 1.0,
+    "geval_threshold": 0.8,
+    "geval_pass": true,
+    "final_pass": true,
+    "geval_reason": "The actual output perfectly matches the expected output across all parameters including intent, origin, destination, departure date, and all passenger counts. There are no invented details or discrepancies."
+  },
+  {
+    "id": "FLIGHT-002",
+    "user_input": "I want to fly from Singapore to Bangkok on 15 October 2026.",
+    "expected": {
+      "intent": "search_flight",
+      "origin": "SIN",
+      "destination": "BKK",
+      "departure_date": "2026-10-15",
+      "adults": null,
+      "children": null,
+      "infants": null
+    },
+    "actual": {
+      "intent": "search_flight",
+      "origin": "SIN",
+      "destination": "BKK",
+      "departure_date": "2026-10-15",
+      "adults": null,
+      "children": null,
+      "infants": null
+    },
+    "field_validation": {
+      "intent": true,
+      "origin": true,
+      "destination": true,
+      "departure_date": true,
+      "adults": true,
+      "children": true,
+      "infants": true
+    },
+    "exact_validation": true,
+    "geval_score": 1.0,
+    "geval_threshold": 0.8,
+    "geval_pass": true,
+    "final_pass": true,
+    "geval_reason": "The actual output perfectly matches the expected output across all parameters, including intent, origin, destination, departure date, and null passenger fields. No unrequested information or hallucinations were introduced, and missing user details were correctly left as null."
+  }
+]

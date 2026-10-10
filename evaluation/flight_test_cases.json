@@ -1,0 +1,30 @@
+[
+  {
+    "id": "FLIGHT-001",
+    "category": "complete_journey",
+    "user_input": "I want to fly from Singapore to Bangkok on 15 October 2026 for 2 adults, 1 child and 1 infant.",
+    "expected": {
+      "intent": "search_flight",
+      "origin": "SIN",
+      "destination": "BKK",
+      "departure_date": "2026-10-15",
+      "adults": 2,
+      "children": 1,
+      "infants": 1
+    }
+  },
+  {
+    "id": "FLIGHT-002",
+    "category": "missing_passengers",
+    "user_input": "I want to fly from Singapore to Bangkok on 15 October 2026.",
+    "expected": {
+      "intent": "search_flight",
+      "origin": "SIN",
+      "destination": "BKK",
+      "departure_date": "2026-10-15",
+      "adults": null,
+      "children": null,
+      "infants": null
+    }
+  }
+]
